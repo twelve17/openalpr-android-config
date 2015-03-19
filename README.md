@@ -17,7 +17,7 @@ Tested under:
 - OpenALPR: [commit 838997925](https://github.com/openalpr/openalpr/tree/838997925a8c4f0518b7bb2d64f9e1e7be994001)
 - android-cmake: [commit 98d85aeb999](https://github.com/taka-no-me/android-cmake/tree/98d85aeb99921aca6ec8a5313c00e7b6a4a989dd) of taka-no-me's fork
 
-**Note**: As of the openalpr commit shown above, the script also runs a [patch]() against the openalpr source to fix a compilation issue in `filesystem.cpp`.
+**Note**: As of the openalpr commit shown above, the script also runs a [patch](https://github.com/twelve17/openalpr-android-config/blob/master/etc/openalpr_android.patch) against the openalpr source to fix a compilation issue in `filesystem.cpp`.
 
 ## Prerequisites
 
@@ -84,6 +84,12 @@ Alternatively, if you have an Android Studio project, you can add the path to yo
            |    |- ...
            |- ...
 
+  ```
+
+Given the above path to the project, run the script like this:
+
+  ```
+   ./bin/build_dependencies.sh /path/to/your/android/studio/project
   ```
   
 You will still need to build any of your own project's JNI classes per the [Wiki instructions](https://github.com/openalpr/openalpr/wiki/Android-compilation) (e.g. creating an `Android.mk` file, etc).
