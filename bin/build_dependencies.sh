@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 # Build openalpr dependencies for various architectures and optionally 
 # copy them into an existing Android Studio project.
