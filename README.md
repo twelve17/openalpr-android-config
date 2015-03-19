@@ -51,7 +51,7 @@ You must install these prerequisites before running the script.
   - `ANDROID_OPENCV_SDK_NAME`
   - `JAVA_SDK_DIR`
  
- ## Execution
+## Execution
  
 Run the script from the root of the project:
 
