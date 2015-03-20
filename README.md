@@ -15,9 +15,9 @@ Tested under:
 - OpenCV: OpenCV-2.4.10-android-sdk
 - Tess-two: [commit d0898ff9e7378](https://github.com/rmtheis/tess-two/tree/d0898ff9e73786770926857de58f8d6e93eb64ac)
 - OpenALPR: [commit 838997925](https://github.com/openalpr/openalpr/tree/838997925a8c4f0518b7bb2d64f9e1e7be994001)
-- android-cmake: [commit 98d85aeb999](https://github.com/taka-no-me/android-cmake/tree/98d85aeb99921aca6ec8a5313c00e7b6a4a989dd) of taka-no-me's fork
+- android-cmake: [commit 98d85aeb999](https://github.com/taka-no-me/android-cmake/tree/98d85aeb99921aca6ec8a5313c00e7b6a4a989dd) of taka-no-me's fork (which fixes [this issue](https://code.google.com/p/android-cmake/issues/detail?id=14#c6))
 
-**Note**: As of the openalpr commit shown above, the script also runs a [patch](https://github.com/twelve17/openalpr-android-config/blob/master/etc/openalpr_android.patch) against the openalpr source to fix a compilation issue in `filesystem.cpp`.
+**Note**: As of the openalpr commit shown above, the script also runs a [patch](https://github.com/twelve17/openalpr-android-config/blob/master/etc/openalpr_android.patch) against the openalpr source to fix a compilation issue in `filesystem.cpp`.  The patch change is based [on this post](http://lxr.free-electrons.com/source/arch/arm/kernel/sys_oabi-compat.c).
 
 ## Prerequisites
 
@@ -93,3 +93,7 @@ Given the above path to the project, run the script like this:
   ```
   
 You will still need to build any of your own project's JNI classes per the [Wiki instructions](https://github.com/openalpr/openalpr/wiki/Android-compilation) (e.g. creating an `Android.mk` file, etc).
+
+## Notes
+
+- openalpr `cmake` command args partially based [on this thread](https://groups.google.com/d/msg/openalpr/IbcSnMqhTxs/Y-bh9qffYzwJ).
